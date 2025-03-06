@@ -1,0 +1,315 @@
+/* Financing Page Specific Styles */
+
+/* Intro Section */
+.financing-intro {
+  background-color: var(--dark-gray);
+  padding: 80px 0;
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.intro-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Financing Options Section */
+.financing-options {
+  background-color: var(--medium-gray);
+  padding: 80px 0;
+}
+
+.financing-options h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.option-card {
+  background-color: var(--dark-gray);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  transition: var(--transition-standard);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.option-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.option-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  background: var(--gradient-hot-cold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.option-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.option-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Financing Process Section */
+.financing-process {
+  background-color: var(--dark-gray);
+  padding: 80px 0;
+}
+
+.financing-process h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.process-steps {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 25px;
+  width: 2px;
+  height: calc(100% - 20px);
+  background: var(--gradient-hot-cold);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gradient-hot-cold);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 20px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.step-content {
+  padding-top: 5px;
+}
+
+.step-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.step-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Benefits Section */
+.financing-benefits {
+  background-color: var(--medium-gray);
+  padding: 80px 0;
+}
+
+.benefits-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.benefits-text h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.benefits-list {
+  list-style: none;
+}
+
+.benefits-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.benefits-list i {
+  color: var(--blue);
+  background: var(--gradient-hot-cold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  margin-top: 3px;
+}
+
+.benefits-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.benefits-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Apply Section */
+.financing-apply {
+  background-color: var(--dark-gray);
+  text-align: center;
+  padding: 80px 0;
+}
+
+.financing-apply h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.financing-apply p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.apply-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* FAQ Section */
+.financing-faq {
+  background-color: var(--medium-gray);
+  padding: 80px 0;
+}
+
+.financing-faq h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.faq-question h3 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.faq-toggle {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding-bottom: 20px;
+  display: none;
+}
+
+.faq-question.active + .faq-answer {
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .benefits-content {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-image {
+    order: -1;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .apply-buttons {
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .step {
+    flex-direction: column;
+  }
+
+  .step-number {
+    margin-bottom: 15px;
+  }
+
+  .step:not(:last-child)::after {
+    left: 25px;
+    top: 50px;
+    height: calc(100% - 10px);
+  }
+}
+

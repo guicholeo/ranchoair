@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Rancho Air | HVAC Services in Elgin & Austin TX</title>
+  <title>Contact Us - Rancho Air</title>
   <meta name="description" content="Contact Rancho Air for all your HVAC needs in Elgin, Austin, and surrounding areas. Get a free estimate, schedule service, or request emergency repairs. Available 24/7.">
   <meta name="keywords" content="Rancho Air, Air Conditioning Elgin TX, Heating Elgin TX, HVAC Elgin TX, Air Conditioning Austin TX, Heating Austin TX, HVAC Austin TX, Air Conditioning Services, Heating Services, HVAC Services, AC Repair, Heater Repair, HVAC Installation, Aire Acondicionado Elgin TX, Calefacción Elgin TX, Aire Acondicionado Austin TX, Calefacción Austin TX, Servicios de Aire Acondicionado, Servicios de Calefacción, Servicios HVAC, Reparación de AC, Reparación de Calefactores, Instalación de HVAC">
   <link rel="canonical" href="https://ranchoair.com/contact.html">
@@ -13,19 +13,20 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ranchoair.com/contact.html">
-  <meta property="og:title" content="Contact Rancho Air | HVAC Services in Elgin & Austin TX">
+  <meta property="og:title" content="Contact Us - Rancho Air">
   <meta property="og:description" content="Contact Rancho Air for all your HVAC needs in Elgin, Austin, and surrounding areas. Get a free estimate, schedule service, or request emergency repairs.">
-  <meta property="og:image" content="https://ranchoair.com/pics/map.png">
+  <meta property="og:image" content="https://ranchoair.com/pics/landing.jpeg">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://ranchoair.com/contact.html">
-  <meta property="twitter:title" content="Contact Rancho Air | HVAC Services in Elgin & Austin TX">
+  <meta property="twitter:title" content="Contact Us - Rancho Air">
   <meta property="twitter:description" content="Contact Rancho Air for all your HVAC needs in Elgin, Austin, and surrounding areas. Get a free estimate, schedule service, or request emergency repairs.">
-  <meta property="twitter:image" content="https://ranchoair.com/pics/map.png">
+  <meta property="twitter:image" content="https://ranchoair.com/pics/landing.jpeg">
   
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,6 +100,7 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
+          <li><a href="financing.html">Financing</a></li>
           <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
         </ul>
         <div class="hamburger" aria-label="Menu Toggle" role="button" tabindex="0" aria-expanded="false">
@@ -111,6 +113,7 @@
   </header>
 
   <main>
+    
 
     <section class="page-header hero smaller-hero">
       <div class="hero-content">
@@ -165,23 +168,22 @@
                 </div>
                 <div class="contact-text">
                   <h3>Service Area</h3>
-                  <p>Austin, Round Rock, Cedar Park, Georgetown, Pflugerville, and surrounding areas</p>
+                  <p>Austin, Elgin, Manor, Round Rock, Pflugerville & all surrounding areas</p>
                 </div>
               </div>
             </div>
             
             <div class="emergency-service">
               <h3>Emergency Service Available 24/7</h3>
-              <p>For after-hours emergencies, please call our main number and follow the prompts for emergency service.</p>
+              <p>For after-hours emergencies, please call our main number.</p>
             </div>
           </div>
           
           <div class="contact-form-container">
             <h2>Send Us a Message</h2>
             <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="f00429e6-560e-46c4-aeec-0848883014cd">
+              <input type="hidden" name="access_key" value="17e932df-6fe2-4f12-a64e-a4098b3a27d6">
               <input type="hidden" name="subject" value="New Contact Form Submission - Rancho Air Conditioning & Heating">
-              <input type="hidden" name="redirect" value="https://web3forms.com/success">
               <input type="hidden" name="from_name" value="Rancho Air Website">
               <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
               
@@ -192,12 +194,12 @@
               
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required title="Please enter a valid email address">
               </div>
               
               <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
+                <input type="tel" id="phone" name="phone" required title="Please enter a 10-digit phone number without spaces or special characters">
               </div>
               
               <div class="form-group">
@@ -222,6 +224,17 @@
                 <button type="submit" class="btn">Submit Message</button>
               </div>
             </form>
+            
+            <!-- Thank You Message Popup -->
+            <div id="thankYouPopup" class="thank-you-popup">
+              <div class="thank-you-content">
+                <span class="close-popup">&times;</span>
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You!</h3>
+                <p>Your message has been sent successfully. We'll get back to you as soon as possible.</p>
+                <button class="btn close-btn">Close</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -231,7 +244,7 @@
       <div class="container">
         <h2>Our Service Area</h2>
         <div class="map-container">
-          <img src="pics/map.png" alt="Map of Austin, TX and surrounding areas including Elgin, Round Rock, Cedar Park, Georgetown, and Pflugerville" class="service-area-map" width="800" height="450">
+          <img src="pics/map.jpg" alt="Map of Austin, TX and surrounding areas including Elgin, Round Rock, Cedar Park, Georgetown, and Pflugerville" class="service-area-map" width="800" height="450">
         </div>
       </div>
     </section>
@@ -307,23 +320,25 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
+            <li><a href="financing.html">Financing</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-contact">
           <h3>Contact Us</h3>
-          <p><i class="fas fa-phone"></i> <a href="tel:5129491447">512-949-1447</a></p>
+          <p><i class="fas fa-phone"></i> <a href="tel:5129491447">512-9491447</a></p>
           <p><i class="fas fa-envelope"></i> <a href="mailto:RanchoAirConditioning@gmail.com">RanchoAirConditioning@gmail.com</a></p>
           <p><i class="fas fa-map-marker-alt"></i> Austin, TX</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Rancho Air Conditioning & Heating. All Rights Reserved. <a href="sitemap.xml">Sitemap</a></p>
+        <p>&copy; 2025 Rancho Air Conditioning & Heating. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 </html>
 
