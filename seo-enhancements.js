@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     image: "https://ranchoair.com/logo.svg",
     url: "https://ranchoair.com",
     telephone: "512-949-1447",
-    email: "RanchoAirConditioning@gmail.com",
+    email: "contact@ranchoair.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Elgin",
@@ -100,11 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Check if gtag is defined, if not, define a dummy function
   if (typeof gtag === "undefined") {
-    window.gtag =
-      window.gtag ||
-      (() => {
-        ;(gtag.q = gtag.q || []).push(arguments)
-      })
+    window.gtag = () => {
+      ;(window.dataLayer = window.dataLayer || []).push(arguments)
+    }
     gtag.l = new Date()
   }
 
