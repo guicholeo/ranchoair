@@ -6,6 +6,117 @@ import Image from "next/image"
 export default function FinancingClientPage() {
   return (
     <>
+      <style jsx>{`
+        .financing-intro {
+          background-color: var(--dark-gray);
+          padding: 80px 0;
+        }
+
+        .intro-content {
+          max-width: 800px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .intro-content h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+          color: var(--white);
+        }
+
+        .intro-content p {
+          font-size: 18px;
+          line-height: 1.7;
+          margin-bottom: 20px;
+        }
+
+        .financing-benefits {
+          background-color: var(--medium-gray);
+          padding: 80px 0;
+        }
+
+        .benefits-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+          align-items: center;
+        }
+
+        .benefits-text h2 {
+          font-size: 32px;
+          margin-bottom: 30px;
+        }
+
+        .benefits-list {
+          list-style: none;
+        }
+
+        .benefits-list li {
+          margin-bottom: 15px;
+          display: flex;
+          align-items: flex-start;
+          gap: 15px;
+        }
+
+        .benefits-list i {
+          color: var(--blue);
+          background: var(--gradient-hot-cold);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 18px;
+          margin-top: 3px;
+        }
+
+        .benefits-image {
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .financing-apply {
+          background-color: var(--dark-gray);
+          text-align: center;
+          padding: 80px 0;
+        }
+
+        .financing-apply h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+
+        .financing-apply p {
+          font-size: 18px;
+          max-width: 600px;
+          margin: 0 auto 30px;
+        }
+
+        .apply-buttons {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+        }
+
+        @media (max-width: 992px) {
+          .benefits-content {
+            grid-template-columns: 1fr;
+          }
+
+          .benefits-image {
+            order: -1;
+            max-width: 600px;
+            margin: 0 auto 30px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .apply-buttons {
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+          }
+        }
+      `}</style>
+
       <section className="page-header hero smaller-hero">
         <div className="hero-content">
           <h1>Financing Options</h1>

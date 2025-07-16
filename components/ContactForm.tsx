@@ -65,45 +65,4 @@ export default function ContactForm() {
         <div className="form-group">
           <label htmlFor="service">Service Needed</label>
           <select id="service" name="service" required>
-            <option value="" disable>
-              Select a service
-            </option>
-            <option value="installation">Installation</option>
-            <option value="service">Service</option>
-            <option value="repair">Repair</option>
-            <option value="maintenance">Maintenance</option>
-            <option value="estimate">Free Estimate</option>
-            <option value="other">Other (Please specify)</option>
-          </select>
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" rows={4} required></textarea>
-        </div>
-
-        <div className="form-group">
-          <button type="submit" className="btn" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Submit Message"}
-          </button>
-        </div>
-      </form>
-
-      {showThankYou && (
-        <div className="thank-you-popup" style={{ display: "flex" }}>
-          <div className="thank-you-content">
-            <span className="close-popup" onClick={() => setShowThankYou(false)}>
-              &times;
-            </span>
-            <i className="fas fa-check-circle"></i>
-            <h3>Thank You!</h3>
-            <p>Your message has been sent successfully. We'll get back to you as soon as possible.</p>
-            <button className="btn close-btn" onClick={() => setShowThankYou(false)}>
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
-  )
-}
+            <option value="" disable\

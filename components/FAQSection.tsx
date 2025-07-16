@@ -43,25 +43,79 @@ export default function FAQSection() {
   }
 
   return (
-    <section className="faq" id="faq">
-      <div className="container">
-        <h2>Frequently Asked Questions</h2>
-        <div className="faq-list">
-          {faqs.map((faq) => (
-            <div key={faq.id} className="faq-item">
-              <div className={`faq-question ${activeId === faq.id ? "active" : ""}`} onClick={() => toggleFAQ(faq.id)}>
-                <h3>{faq.question}</h3>
-                <span className="faq-toggle">+</span>
-              </div>
-              {activeId === faq.id && (
-                <div className="faq-answer">
-                  <p>{faq.answer}</p>
+    <>
+      <style jsx>{`
+        .faq {
+          background-color: var(--dark-gray);
+        }
+
+        .faq h2 {
+          font-size: 28px;
+          margin-bottom: 40px;
+          text-align: center;
+        }
+
+        .faq-list {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .faq-item {
+          margin-bottom: 20px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-question {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 0;
+          cursor: pointer;
+        }
+
+        .faq-question h3 {
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+
+        .faq-toggle {
+          font-size: 24px;
+          transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .faq-toggle {
+          transform: rotate(45deg);
+        }
+
+        .faq-answer {
+          padding-bottom: 20px;
+          display: ${activeId ? "block" : "none"};
+        }
+      `}</style>
+
+      <section className="faq" id="faq">
+        <div className="container">
+          <h2>Frequently Asked Questions</h2>
+          <div className="faq-list">
+            {faqs.map((faq) => (
+              <div key={faq.id} className="faq-item">
+                <div
+                  className={`faq-question ${activeId === faq.id ? "active" : ""}`}
+                  onClick={() => toggleFAQ(faq.id)}
+                >
+                  <h3>{faq.question}</h3>
+                  <span className="faq-toggle">+</span>
                 </div>
-              )}
-            </div>
-          ))}
+                {activeId === faq.id && (
+                  <div className="faq-answer">
+                    <p>{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

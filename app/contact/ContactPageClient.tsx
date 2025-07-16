@@ -7,6 +7,101 @@ import Image from "next/image"
 export default function ContactPageClient() {
   return (
     <>
+      <style jsx>{`
+        .contact-content {
+          background-color: var(--dark-gray);
+        }
+
+        .contact-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+        }
+
+        .contact-info h2,
+        .contact-form-container h2 {
+          font-size: 28px;
+          margin-bottom: 20px;
+        }
+
+        .contact-details {
+          margin-top: 30px;
+        }
+
+        .contact-item {
+          display: flex;
+          gap: 15px;
+          margin-bottom: 30px;
+        }
+
+        .contact-icon {
+          font-size: 24px;
+          background: var(--gradient-hot-cold);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          min-width: 30px;
+        }
+
+        .contact-text h3 {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+
+        .emergency-service {
+          margin-top: 40px;
+          padding: 25px;
+          background-color: var(--medium-gray);
+          border-radius: 8px;
+          border-left: 4px solid;
+          border-image: var(--gradient-hot-cold) 1;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .emergency-service h3 {
+          color: var(--red);
+          margin-bottom: 10px;
+        }
+
+        .map {
+          background-color: var(--medium-gray);
+          text-align: center;
+        }
+
+        .map h2 {
+          font-size: 28px;
+          margin-bottom: 30px;
+        }
+
+        .map-container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 30px 0;
+        }
+
+        .service-area-map {
+          width: 800px;
+          height: 450px;
+          object-fit: cover;
+          border-radius: 8px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 992px) {
+          .contact-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 900px) {
+          .service-area-map {
+            width: 100%;
+            height: 350px;
+          }
+        }
+      `}</style>
+
       <section className="page-header hero smaller-hero">
         <div className="hero-content">
           <h1>Contact Us</h1>
